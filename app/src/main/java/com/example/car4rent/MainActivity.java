@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new HomeFragment());
             } else if (itemId == R.id.notification) {
                 replaceFragment(new RegisterFragment());
+            } else if (itemId == R.id.trip) {
+                replaceFragment(new TripFragment());
             } else if (itemId == R.id.profile) {
                 replaceFragment(new LoginFragment());
             }
