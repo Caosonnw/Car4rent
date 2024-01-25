@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/ctn_register"
     tools:context=".RegisterFragment">
 
     <ImageView
@@ -124,7 +125,6 @@
             android:layout_height="wrap_content"
             android:hint="Nhập mật khẩu"
             android:imeOptions="actionDone|actionUnspecified"
-            android:password="true"
             tools:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -136,13 +136,13 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="#7BD9D8"
         android:paddingLeft="100dp"
         android:paddingTop="15dp"
         android:paddingRight="100dp"
         android:paddingBottom="15dp"
         android:text="Đăng ký"
         android:textSize="20sp"
+        android:background="@drawable/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -162,7 +162,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/txtDangNhapNgay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
