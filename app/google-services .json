@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756675318715",
+    "project_id": "car4rent-ba159",
+    "storage_bucket": "car4rent-ba159.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756675318715:android:3795f1ff76d8f6c5876a9e",
+        "android_client_info": {
+          "package_name": "com.example.car4rent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPCGY6KEsSTZvOzC48kMTMYIT2mDm96nE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
