@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
+    ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (itemId == R.id.trip) {
                 replaceFragment(new TripFragment());
             } else if (itemId == R.id.profile) {
-                replaceFragment(new LoginFragment());
+                replaceFragment(new ProfileFragment());
             }
             return true;
         });
