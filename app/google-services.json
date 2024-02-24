@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "336513761740",
+    "firebase_url": "https://project-2dcd9-default-rtdb.firebaseio.com",
+    "project_id": "project-2dcd9",
+    "storage_bucket": "project-2dcd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336513761740:android:bd298887992eb190451d69",
+        "android_client_info": {
+          "package_name": "com.example.car4rent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5sNINjE5W2PE5t_GaaqC85bRNSwY2hIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
