@@ -1,7 +1,6 @@
 package com.example.car4rent;
 
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -19,8 +18,6 @@ import android.widget.Button;
 public class HomeFragment extends Fragment {
     private Button btnXeTuLai;
     private Button btnXeCoTaiXe;
-
-
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
