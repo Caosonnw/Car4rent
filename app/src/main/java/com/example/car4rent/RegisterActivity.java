@@ -19,6 +19,8 @@ import android.util.Log;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
+
 public class RegisterActivity extends AppCompatActivity {
     TextView loginNow;
     EditText edEmail, edName, edPassWord;
@@ -82,6 +84,13 @@ public class RegisterActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
+                                    // Set display name
+                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                                    UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                            .setDisplayName(name)
+                                            .build();
+
+                                    user.updateProfile(profileUpdates);
                                     Toast.makeText(RegisterActivity.this, "Đăng ký thành công",
                                             Toast.LENGTH_SHORT).show();
                                 } else {

@@ -73,6 +73,9 @@ public class ProfileFragment extends Fragment {
             // Start LoginActivity
             Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
+        } else {
+            Intent intent = new Intent(getActivity(), LogoutActivity.class);
+            startActivity(intent);
         }
     }
 }
