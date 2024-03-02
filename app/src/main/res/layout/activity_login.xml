@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
-    tools:context=".LoginFragment">
+    tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -43,11 +43,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:hint="Nhập số điện thoại"
-            android:inputType="phone" />
+            android:layout_height="wrap_content"
+            android:hint="Nhập email" />
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="54dp"-->
+<!--            android:hint="Nhập số điện thoại"-->
+<!--            android:inputType="phone" />-->
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,11 +62,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="247dp"
-        android:text="Số điện thoại của bạn"
+        android:text="Email của bạn"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -88,17 +95,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/PassEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nhập mật khẩu"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword" />
+            android:imeOptions="actionDone|actionUnspecified"
+            android:inputType="textPassword"
+            />
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Nhập mật khẩu"-->
+<!--            android:imeOptions="actionDone"-->
+<!--            android:inputType="textPassword" />-->
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnDangNhap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -150,7 +176,7 @@
         android:layout_marginEnd="85dp"
         android:clickable="true"
         android:onClick="onLinkClick"
-        android:text="Đăng ký ngay."
+        android:text="Đăng ký ngay"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

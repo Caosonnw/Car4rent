@@ -4,11 +4,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import android.widget.TextView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +20,8 @@ import android.widget.Button;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+    private TextView textUserName;
+    private FirebaseAuth mAuth;
     private Button btnXeTuLai;
     private Button btnXeCoTaiXe;
 
@@ -69,8 +75,19 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        textUserName = view.findViewById(R.id.textUser);
         btnXeTuLai = view.findViewById(R.id.btnXeTuLai);
         btnXeCoTaiXe = view.findViewById(R.id.btnXeCoTaiXe);
+
+        mAuth = FirebaseAuth.getInstance();
+        // Get the current user
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            // Set the user's email in the TextView
+            String userName = getUserDisplayName(currentUser);
+            textUserName.setText("Hi, " + userName);
+        }
 
         btnXeTuLai.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,5 +103,8 @@ public class HomeFragment extends Fragment {
                 btnXeCoTaiXe.setSelected(true);
             }
         });
+    }
+    private String getUserDisplayName(FirebaseUser user) {
+        return user.getDisplayName();
     }
 }
