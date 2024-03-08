@@ -1,21 +1,24 @@
 package com.example.car4rent;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.car4rent.databinding.ActivityMainBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-
     BottomNavigationView bottomNavigationView;
-
     ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
-        // Load the default fragment
         replaceFragment(new HomeFragment());
+
     }
 
     private void replaceFragment(Fragment fragment) {

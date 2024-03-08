@@ -16,13 +16,16 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class LoginActivity extends AppCompatActivity {
+    ImageView icBackToHome;
     TextView registerNow;
     EditText edEmail, edPassWord;
     Button btnLogin;
@@ -49,6 +52,15 @@ public class LoginActivity extends AppCompatActivity {
         edEmail = findViewById(R.id.emailEditText);
         edPassWord = findViewById(R.id.PassEditText);
         btnLogin = findViewById(R.id.btnDangNhap);
+        icBackToHome = findViewById(R.id.backToHome);
+        icBackToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         registerNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(), "Đăng nhập thành công", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), LoginPhoneNumberActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
