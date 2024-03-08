@@ -1,8 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/background"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/baseline_account_circle_24"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/imageView"
+                    app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:background="@drawable/round_back_secondary_100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:padding="15dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Tài khoản của tôi"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_person_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Đăng kí thuê xe"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_assignment_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Xe yêu thích"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_favorite_border_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Địa chỉ của tôi"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_add_business_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Giấy phép lái xe"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_assignment_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Thẻ của tôi"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_add_card_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/round_back_secondary_100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Quà tặng"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_card_giftcard_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Giới thiệu"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_device_hub_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/round_back_secondary_100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Đổi mật khẩu"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_lock_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/white"
+                        android:drawablePadding="4dp"
+                        android:padding="8dp"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Yêu cầu xóa tài khoản"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/baseline_delete_24"
+                        android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+                        />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="15dp">
+                <Button
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="Đăng xuất"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textColor="#AB1A1A"
+                    android:drawableLeft="@drawable/baseline_logout_24"
+
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
