@@ -4,12 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.car4rent.utils.AndroidUtil;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -61,21 +67,53 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        Button btnLogout = view.findViewById(R.id.btnLogout);
+        TextView txt_Upcar = view.findViewById(R.id.txt_Upcar);
+        TextView txt_Listcar = view.findViewById(R.id.txt_Listcar);
+        txt_Upcar.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), UpdateCarActivity.class);
+            startActivity(intent);
+        });
+        txt_Listcar.setOnClickListener(v -> {
+            navigateToEditCarFragment();
+        });
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+
+        return view;
+
     }
     @Override
     public void onStart() {
         super.onStart();
 
-        // Check if user is logged in
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser == null) {
-            // Start LoginActivity
             Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
-        } else {
-            Intent intent = new Intent(getActivity(), LogoutActivity.class);
-            startActivity(intent);
         }
+        else {
+            Log.d("ProfileFragment", "User logged in");
+            AndroidUtil.showToast(getActivity().getApplicationContext(), "User logged in");
+        }
+    }
+    private void navigateToEditCarFragment() {
+        EditCarFragment editCarFragment = new EditCarFragment();
+
+        FragmentManager fragmentManager = getParentFragmentManager();
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, editCarFragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

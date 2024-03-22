@@ -45,6 +45,7 @@ android {
             version = "3.22.1"
         }
     }
+    ndkVersion = "26.2.11394342"
 }
 
 dependencies {
@@ -54,12 +55,13 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation("com.google.firebase:firebase-firestore:24.10.2")
-
+    implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-auth:22.0.0")
     implementation("com.google.firebase:firebase-messaging:23.4.1")
     implementation("com.google.firebase:firebase-analytics:21.5.1")
     implementation("com.google.firebase:firebase-inappmessaging-display:20.4.0")
+    implementation("androidx.activity:activity:1.8.0")
 
 
     testImplementation("junit:junit:4.13.2")

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/image_car"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="center"
+            android:src="@drawable/placeholder_image" />
+
+        <TextView
+            android:id="@+id/text_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hãng xe"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+
+        <!-- Số chỗ -->
+        <TextView
+            android:id="@+id/text_seats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số chỗ"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Nhiên liệu -->
+        <TextView
+            android:id="@+id/text_fuel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhiên liệu"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- động cơ -->
+        <TextView
+            android:id="@+id/text_transmission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Động cơ"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"/>
+
+
+        <!-- Giá tiền/ngày -->
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giá tiền/ngày"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Thuê xe"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

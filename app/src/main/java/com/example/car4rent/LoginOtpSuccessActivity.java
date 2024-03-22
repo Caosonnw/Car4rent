@@ -17,7 +17,7 @@ public class LoginOtpSuccessActivity extends AppCompatActivity {
 
         btn_loginToHome = findViewById(R.id.login_next_btn_sc);
         btn_loginToHome.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), UpdateCarActivity.class);
             startActivity(intent);
         });
     }

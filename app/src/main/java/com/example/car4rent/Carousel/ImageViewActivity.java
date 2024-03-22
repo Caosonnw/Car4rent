@@ -18,8 +18,13 @@ public class ImageViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_image_view);
 
         ImageView imageView = findViewById(R.id.imageView);
+        TextView descriptionTextView = findViewById(R.id.descriptionTextView);
 
-        Glide.with(ImageViewActivity.this).load(getIntent().getStringExtra("image")).into(imageView);
+        String imageUrl = getIntent().getStringExtra("image");
+        String description = getIntent().getStringExtra("description");
 
+        Glide.with(ImageViewActivity.this).load(imageUrl).into(imageView);
+        descriptionTextView.setText(description);
     }
+
 }
